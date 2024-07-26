@@ -1,0 +1,179 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+.App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+body {  
+  background-color:rgb(75, 155, 177);  
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #4a4444;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: #b0a3a3;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover:not(.active) {
+  background-color: #ddd;
+}
+li a.active {
+  color: white;
+  background-color: #24b7b9;
+}
+img {
+  margin-right: 55px;
+}
+video {
+  margin-top: 10px;
+}
+.container {  
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+  height: 10%;  
+}
+.content {  
+  width: 100%; 
+  max-width: 800px; 
+  padding: 20px;  
+  border: 1px solid #ccc; 
+  background-color: transparent;
+}  
+.mw_body_content {
+  font-size: 1em;
+  color: #c2cdda;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.picture {    
+  display: flex;  
+  flex-direction: column;  
+  justify-content: center;
+  align-items: center;
+  height: auto; 
+  width: 150px;    
+  background-color: rgb(25, 25, 28);; 
+  transition: background-color 1.25s;  
+  position: relative;
+  overflow: hidden;
+}
+.picture::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(43, 121, 182);
+  transform: translateY(100%);
+  transition: transform 1s;
+  z-index: 1;
+}
+.picture:hover::before {
+  transform: translateY(0);
+}  
+.icon, .text-container {
+  position: relative;
+  z-index: 1;
+}
+.text-container {
+  text-align: center;
+}
+.view {
+  font-size: large;
+  color: aliceblue;
+}
+#myInput {
+  background-image: url('https://statiwww.jyshare.com/images/mix/searchicon.png'); /* 添加搜索按钮 */
+  background-position: 10px 12px; 
+  background-repeat: no-repeat; 
+  width: 92.5%; 
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd; 
+  margin-bottom: 12px; 
+}
+ 
+#myUL {
+  
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+ 
+#myUL li a {
+  border: 1px solid #ddd; 
+  margin-top: -1px; 
+  background-color: #f6f6f6; 
+  padding: 12px; 
+  text-decoration: none;
+  font-size: 18px; 
+  color: black; 
+  display: block; 
+  overflow: hidden;
+}
+ 
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+#video {  
+  position:fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index:-1;
+  width:auto;
+  height:auto;
+  background-size: cover;
+  background-position:center;
+} 
+.app-container {
+  position: relative;
+  padding: 20px;
+  z-index: 1;
+}
