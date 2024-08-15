@@ -1,7 +1,3 @@
-.App {
-  text-align: center;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -167,13 +163,582 @@ video {
   min-width: 100%;
   min-height: 100%;
   z-index:-1;
-  width:auto;
+  width: 1280px;
   height:auto;
   background-size: cover;
   background-position:center;
 } 
 .app-container {
   position: relative;
-  padding: 20px;
+  padding: 0;
   z-index: 1;
 }
+.Top_Outliner {
+  z-index: 23;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  pointer-events: none;
+  height: 6.75rem;
+  display: flex;
+  align-items: center;
+}
+.Top_Outliner>* {
+  pointer-events: all;
+  position: relative
+}
+@media(orientation: portrait) {
+  .Top_Outliner {
+      height:9.375rem
+  }
+}
+
+.Top_Outliner:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity .6s;
+  background-image: linear-gradient(0deg,transparent,rgba(0,0,0,.6),rgba(0,0,0,.8))
+}
+
+@media(orientation: portrait) {
+  .Top_Outliner:before {
+      background-image:linear-gradient(0deg,transparent,rgba(0,0,0,.8))
+  }
+}
+
+.Top_Outliner._cf7dde67:before {
+  opacity: 0
+}
+
+.Top_Outliner.arklogo {
+  cursor: pointer;
+  width: 7rem;
+  color: #fff;
+  margin-left: 3rem;
+  margin-right: auto
+}
+
+@media(orientation: portrait) {
+  .Top_Outliner .arklogo {
+      width:10.25rem;
+      margin-left: 1.75rem
+  }
+}
+
+.Top_Outliner .Function_Bar {
+  padding: 0 1rem;
+}
+
+@media(orientation: portrait) {
+  .Top_Outliner .Function_Bar {
+      display:none
+  }
+}
+
+.Top_Outliner ._149a6e98 {
+  display: flex;
+  /*width: 14.75rem;
+  height: 100%;
+  padding-left: .75rem*/
+  justify-content: space-around; 
+  align-items: center;                  
+  width: auto; 
+  max-width: 12rem; 
+  margin: auto;
+  padding: 0 1rem;
+}
+
+@media(orientation: portrait) {
+  .Top_Outliner ._149a6e98 {
+      padding-left:unset;
+      padding-right: .75rem;
+      width: 15rem
+  }
+}
+
+.Top_Outliner {
+  position: relative;
+  flex: 1 1;
+  height: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: color .3s,background-color .3s;
+  color: #c4c2c2
+}
+.Top_Outliner ._149a6e98 ._Threeicons {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.Top_Outliner ._149a6e98 ._Threeicons svg {
+  height: 1.75rem;
+  width: auto;
+  display: block;
+}
+
+@media(orientation: portrait) {
+  .Top_Outliner ._149a6e98 {
+    max-width: 15rem; /* Slightly larger width for portrait mode */
+}
+  .Top_Outliner ._149a6e98 ._Threeicons svg {
+      height:2.25rem
+  }
+}
+
+.Top_Outliner ._149a6e98 ._Threeicons._5d27adee  {
+  color: #18d1ff
+}
+
+@media(any-hover: hover) {
+  .Top_Outliner ._149a6e98 ._Threeicons:not(._e6c9defd):hover {
+      color:#18d1ff
+  }
+}
+
+.Top_Outliner ._149a6e98 ._Threeicons._e6c9defd svg {
+  transition: transform .3s;
+  transform: scaleY(.5)
+}
+
+.Top_Outliner ._149a6e98 ._Threeicons._e6c9defd._5d27adee svg {
+  transform: scaleY(1)
+}
+
+.Top_Outliner .functionliners {
+  display: none;
+  width: 5.75rem;
+  height: 100%
+}
+
+@media(orientation: portrait) {
+  .Top_Outliner .functionliners {
+      display:flex
+  }
+}
+
+.Top_Outliner .functionliners .Liners {
+  margin: auto;
+  width: 2.625rem;
+  height: 2.375rem;
+  position: relative;
+  pointer-events: none
+}
+
+.Top_Outliner .functionliners .Liners ._016b1d43 {
+  height: 2px;
+  background-color: #fff;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  transition: opacity .3s,top .3s,bottom .3s,transform .3s
+}
+
+.Top_Outliner .functionliners .Liners ._016b1d43._a1600518 {
+  top: 1px;
+  transform: translate(-50%,-50%)
+}
+
+.Top_Outliner .functionliners .Liners ._016b1d43._b0d45f10 {
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%)
+}
+
+.Top_Outliner .functionliners .Liners ._016b1d43._daaf28c6 {
+  bottom: 1px;
+  transform: translate(-50%,50%)
+}
+
+.Top_Outliner .functionliners._Threeicons .Liners ._016b1d43._a1600518 {
+  top: 1.1875rem;
+  transform: translate(-50%,-50%) rotate(45deg) scaleX(1.2)
+}
+
+.Top_Outliner .functionliners._Threeicons .Liners ._016b1d43._b0d45f10 {
+  opacity: 0;
+  transform: translateX(-100%) translateY(-50%)
+}
+
+.Top_Outliner .functionliners._Threeicons .Liners ._016b1d43._daaf28c6 {
+  bottom: 1.1875rem;
+  transform: translate(-50%,50%) rotate(-45deg) scaleX(1.2)
+}
+._6975b23b ._e18c21b1 ._ad014b16 .Liners {
+  position: absolute;
+  height: 59.375rem;
+  left: -18.75rem;
+  top: -2rem;
+  color: #06bbff
+}
+
+._6975b23b ._e18c21b1 ._ad014b16 .Liners svg {
+  height: 100%;
+  width: auto
+}
+
+@media(orientation: portrait) {
+  ._6975b23b ._e18c21b1 ._ad014b16 .Liners {
+      height:55rem;
+      left: -5rem
+  }
+}
+._6975b23b ._e18c21b1 ._ec897509 ._5f574cec ._c92ddfbb ._d47eeb0d .Liners {
+  width: 1rem;
+  margin-right: .5rem
+}
+
+@media(orientation: portrait) {
+  ._6975b23b ._e18c21b1 ._ec897509 ._5f574cec ._c92ddfbb ._d47eeb0d .Liners {
+      width:1.5rem
+  }
+}
+._6975b23b ._e18c21b1 ._5fb12edd ._c1f164d6 ._89493386 .Liners {
+  width: .5rem
+}
+._5a5107d2 ._e18c21b1 ._ad014b16 .Liners {
+  position: absolute;
+  height: 59.375rem;
+  left: -18.75rem;
+  top: -2rem;
+  color: #06bbff
+}
+
+._5a5107d2 ._e18c21b1 ._ad014b16 .Liners svg {
+  height: 100%;
+  width: auto
+}
+
+@media(orientation: portrait) {
+  ._5a5107d2 ._e18c21b1 ._ad014b16 .Liners {
+      height:55rem;
+      left: -5rem
+  }
+}
+.Top_Outliner.arklogo{
+  cursor: pointer;
+    width: 7rem;
+    color: #fff;
+    margin-left: 3rem;
+    margin-right: auto
+}
+@media (orientation: portrait) {
+  .Top_Outliner.arklogo {
+      width: 10.25rem;
+      margin-left: 1.75rem;
+  }
+}
+.Function_Bar,
+._149a6e98,
+.functionliners {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px; 
+}
+
+.Function_Bar {
+  flex: 1; 
+}
+._c91e47cc {
+  text-decoration: none;
+  color: inherit; /* Inherit the color from the children elements */
+  text-align: center;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+/* Flex container for the navigation items */
+._57987e85 {
+  display: flex;
+}
+
+._57987e85 ._c91e47cc {
+  margin: 0 2.5rem;
+}
+
+/* Style for the English text */
+._57987e85 ._c91e47cc .Eng_INTRO {
+  font-family: 'Hookskai';
+  font-size: 1.375rem;
+  color: #f5f2f2;
+  transition: color 0.3s;
+}
+
+/* Style for the Chinese text */
+._57987e85 ._c91e47cc .CN_INTRO {
+  font-family: 'SourceHanSans-Medium';
+  font-size: .875rem;
+  color: #d9dddf;
+  margin-top: 0.5rem;
+  transition: color 0.3s;
+}
+
+/* Active state for the currently selected link */
+._57987e85 ._c91e47cc.active .Eng_INTRO,
+._57987e85 ._c91e47cc.active .CN_INTRO {
+  color: #19d1ff; /* Maintain this color when active */
+}
+
+/* Hover effect on the entire link */
+@media (any-hover: hover) {
+  ._57987e85 ._c91e47cc:hover {
+    color: inherit; /* Inherit color from children */
+  }
+
+  /* Hover effect directly on text elements to change their color */
+  ._57987e85 ._c91e47cc:hover .Eng_INTRO,
+  ._57987e85 ._c91e47cc:hover .CN_INTRO {
+    color: #19d1ff; /* The desired hover color */
+  }
+}
+
+/* Additional styles for a different section */
+._3c14782f ._c91e47cc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 7.5rem;
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.3);
+  transition: opacity .2s, transform .2s;
+  opacity: 0;
+  transform: translateX(20%);
+}
+
+._3c14782f._f3a31881 ._c91e47cc {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+._3c14782f ._c91e47cc .Eng_INTRO {
+  font-family: 'Oswald-Medium';
+  font-size: 2.25rem;
+  transition: color 0.3s;
+}
+
+._3c14782f ._c91e47cc .CN_INTRO {
+  font-family: 'SourceHanSans-Medium';
+  font-size: 1.75rem;
+  position: relative;
+  transition: color 0.3s;
+}
+
+/* Adding underline effect with :after pseudo-element */
+._3c14782f ._c91e47cc .CN_INTRO:after {
+  content: "";
+  display: block;
+  background-color: currentColor;
+  width: 100%;
+  height: .375rem;
+  position: absolute;
+  right: 0;
+  bottom: -.1875rem;
+}
+
+/* Active link color for the other section */
+._3c14782f ._c91e47cc._f3a31881 .Eng_INTRO,
+._3c14782f ._c91e47cc._f3a31881 .CN_INTRO {
+  color: #19d1ff;
+}
+._387897ce ._72424dec ._67492428 ._9da51d75 {
+  cursor: pointer;
+  flex: none
+}
+
+._387897ce ._72424dec ._67492428 ._9da51d75 svg {
+  width: 3rem;
+  margin: auto
+}
+
+._387897ce ._72424dec ._67492428 ._9da51d75._3d927875 svg,._387897ce ._72424dec ._67492428 ._9da51d75._5a936be1 svg {
+  width: 4.5rem
+}
+
+._387897ce ._72424dec ._67492428 ._9da51d75._7ed9a467 svg,._387897ce ._72424dec ._67492428 ._9da51d75._fa714953 svg {
+  width: 3rem
+}
+
+._387897ce ._72424dec ._67492428 ._9da51d75._ff20e8b8 svg {
+  width: 4.5rem
+}
+._6975b23b ._e18c21b1 ._ec897509 ._91d4b220 ._d9eb5fa0 ._9da51d75 {
+  cursor: pointer;
+  flex: 1 1;
+  transition: opacity .3s;
+  opacity: .7
+}
+
+._6975b23b ._e18c21b1 ._ec897509 ._91d4b220 ._d9eb5fa0 ._9da51d75 svg {
+  width: 2rem;
+  margin: auto
+}
+
+._6975b23b ._e18c21b1 ._ec897509 ._91d4b220 ._d9eb5fa0 ._9da51d75._3d927875 svg {
+  width: 2rem
+}
+
+._6975b23b ._e18c21b1 ._ec897509 ._91d4b220 ._d9eb5fa0 ._9da51d75._5a936be1 svg {
+  width: 3rem
+}
+
+._6975b23b ._e18c21b1 ._ec897509 ._91d4b220 ._d9eb5fa0 ._9da51d75._7ed9a467 svg,._6975b23b ._e18c21b1 ._ec897509 ._91d4b220 ._d9eb5fa0 ._9da51d75._fa714953 svg {
+  width: 2rem
+}
+
+._6975b23b ._e18c21b1 ._ec897509 ._91d4b220 ._d9eb5fa0 ._9da51d75._ff20e8b8 svg {
+  width: 3rem
+}
+
+@media(any-hover: hover) {
+  ._6975b23b ._e18c21b1 ._ec897509 ._91d4b220 ._d9eb5fa0 ._9da51d75:hover {
+      opacity:1
+  }
+}
+ ._e18c21b1 ._ec897509 ._91d4b220 ._d9eb5fa0 ._9da51d75 {
+  cursor: pointer;
+  flex: none;
+  width: 3.375rem;
+  height: 3.375rem;
+  border-radius: .5rem;
+  display: flex;
+  transition: color .3s,background-color .3s;
+  color: #fff;
+  background-color: #000
+}
+
+@media(orientation: portrait) {
+  ._5a5107d2._e18c21b1 ._ec897509 ._91d4b220 ._d9eb5fa0 ._9da51d75 {
+      border:1px solid #fff
+  }
+}
+
+._5a5107d2._e18c21b1 ._ec897509 ._91d4b220 ._d9eb5fa0 ._9da51d75 svg {
+  width: 1.75rem;
+  margin: auto
+}
+
+._5a5107d2 ._e18c21b1 ._ec897509 ._91d4b220 ._d9eb5fa0 ._9da51d75._3d927875 svg {
+  width: 2rem
+}
+
+@media(orientation: portrait) {
+  ._5a5107d2 ._e18c21b1 ._ec897509 ._91d4b220 ._d9eb5fa0 ._9da51d75._3d927875 svg {
+      width:4rem
+  }
+}
+
+._5a5107d2 ._e18c21b1 ._ec897509 ._91d4b220 ._d9eb5fa0 ._9da51d75._5a936be1 svg {
+  width: 2.75rem
+}
+
+@media(orientation: portrait) {
+  ._5a5107d2 ._e18c21b1 ._ec897509 ._91d4b220 ._d9eb5fa0 ._9da51d75._5a936be1 svg {
+      width:5rem
+  }
+}
+
+._5a5107d2 ._e18c21b1 ._ec897509 ._91d4b220 ._d9eb5fa0 ._9da51d75._7ed9a467 svg {
+  width: 2rem
+}
+
+@media(orientation: portrait) {
+  ._5a5107d2 ._e18c21b1 ._ec897509 ._91d4b220 ._d9eb5fa0 ._9da51d75._7ed9a467 svg {
+      width:4rem
+  }
+}
+
+._5a5107d2 ._e18c21b1 ._ec897509 ._91d4b220 ._d9eb5fa0 ._9da51d75._fa714953 svg {
+  width: 2rem
+}
+
+@media(orientation: portrait) {
+  ._5a5107d2 ._e18c21b1 ._ec897509 ._91d4b220 ._d9eb5fa0 ._9da51d75._fa714953 svg {
+      width:4rem
+  }
+}
+
+._5a5107d2 ._e18c21b1 ._ec897509 ._91d4b220 ._d9eb5fa0 ._9da51d75._ff20e8b8 svg {
+  width: 3rem
+}
+
+@media(orientation: portrait) {
+  ._5a5107d2 ._e18c21b1 ._ec897509 ._91d4b220 ._d9eb5fa0 ._9da51d75._ff20e8b8 svg {
+      width:6rem
+  }
+}
+
+@media(any-hover: hover) {
+  ._5a5107d2 ._e18c21b1 ._ec897509 ._91d4b220 ._d9eb5fa0 ._9da51d75:hover {
+      color:#000;
+      background-color: #fff
+  }
+}
+
+@media(orientation: portrait) {
+  ._5a5107d2 ._e18c21b1 ._ec897509 ._91d4b220 ._d9eb5fa0 ._9da51d75 {
+      width:6.375rem;
+      height: 6.375rem;
+      border-radius: 1rem
+  }
+}
+
+/*@outcode*/
+._Threeicons {
+  margin: 10px 0;
+}
+.Liners {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100px; 
+}
+
+._016b1d43 {
+  width: 100%;
+  height: 5px;
+  background-color: black; 
+  margin-bottom: 5px; 
+}
+
+._016b1d43._a1600518 {
+  background-color: #666;
+}
+
+._016b1d43._b0d45f10 {
+  background-color: #999;
+}
+
+._016b1d43._daaf28c6 {
+  background-color: #ccc;
+}
+.arklogo{
+  top: 0;
+  filter: invert(100%);
+  padding:0 0 30px 20px;
+}
+/*.Eng_INTRO {
+    font-family: 'Hookskai';
+    font-size:1.375rem;
+    text-decoration: none;
+    color: #f5f2f2;
+    transition: color .3s;
+}
+.CN_INTRO {
+  font-family: 'SourceHanSans-Medium';
+  font-size: .875rem;
+  text-decoration: none;
+  position: relative;
+  display: flex; 
+  text-align: center; 
+  color: #d9dddf;
+  margin-top: 0.5rem;
+  background-color: transparent;
+  transition: color 0.3s;
+}*/
